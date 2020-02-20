@@ -8,4 +8,7 @@ app.get(['/'], function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-var server = app.listen(3000);
+var port = process.env.PORT || 3001 || 3000;
+app.listen(port, function () {
+  console.log('node express frontend up on port ' + port);
+});
