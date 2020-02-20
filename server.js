@@ -8,6 +8,11 @@ app.get(['/'], function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get(['/resume'], function (req, res) {
+  console.log("resume url");
+  res.sendFile(__dirname + '/devResume.pdf');
+});
+
 app.get(['/*'], function (req, res) {
   console.log("base url redirect");
   res.redirect(req.baseUrl + '/');
