@@ -10,7 +10,7 @@ app.get(['/'], function (req, res) {
 
 app.get(['/resume'], function (req, res) {
   console.log("resume url");
-  res.sendFile(__dirname + '/techResume.pdf');
+  res.sendFile(__dirname + '/FullStack.pdf');
 });
 
 app.get(['/*'], function (req, res) {
