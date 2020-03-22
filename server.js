@@ -1,7 +1,11 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 
-app.use(express.static('/index.html'));
+
+var dir = path.join(__dirname, '/');
+app.use(express.static(dir));
+
 
 app.get(['/'], function (req, res) {
   console.log("entry url");
